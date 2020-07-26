@@ -28,6 +28,7 @@
                         <a href="index.php?page=investigaciones">Investigaciones</a>
                         <a href="index.php?page=extensiones">Extensiones</a>
                         <a href="index.php?page=contacto">Contacto</a>
+                        <a href="index.php?page=login">Id</a>
                 </nav>
             </div>
     </header>
