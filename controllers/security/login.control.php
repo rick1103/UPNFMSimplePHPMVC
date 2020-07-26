@@ -48,7 +48,7 @@ function run()
                     $loginData["tocken"] = md5("loginentry".time());
                     $_SESSION["login_tocken"] = $loginData["tocken"];
                     $loginData["showerrors"] = true;
-                    renderizar("security/login", $loginData);
+                    renderizar("security/login", $loginData, "layout_t.view.tpl");
                 } else {
                     //Correr Login del modelo de datos
                     $tmperrors = validarLogin($loginData["txtEmail"], $loginData["txtPswd"]);
@@ -59,7 +59,7 @@ function run()
                             $loginData["errors"][] = $terr;
                         }
                         $loginData["showerrors"] = true;
-                        renderizar("security/login", $loginData);
+                        renderizar("security/login", $loginData, "layout_t.view.tpl");
                     } else {
                         header("Location:index.php" . $loginData["returnto"]);
                     }
@@ -69,14 +69,14 @@ function run()
                 $_SESSION["login_tocken"] = $loginData["tocken"];
                 $loginData["errors"][] = "Falla al intentar validar credenciales.";
                 $loginData["showerrors"] = true;
-                renderizar("security/login", $loginData);
+                renderizar("security/login", $loginData, "layout_t.view.tpl");
             }
         } else {
             $loginData["tocken"] = md5("loginentry".time());
             $_SESSION["login_tocken"] = $loginData["tocken"];
             $loginData["errors"][] = "Falla al intentar validar credenciales.";
             $loginData["showerrors"] = true;
-            renderizar("security/login", $loginData);
+            renderizar("security/login", $loginData, "layout_t.view.tpl");
         }
     }
 }
