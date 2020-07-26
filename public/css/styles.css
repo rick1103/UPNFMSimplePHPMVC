@@ -1,0 +1,1176 @@
+html{
+    font-size: 62.5%; 
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*----------------------------Globales-------------------------------*/
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    width: 95%;
+    max-width: 160rem;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+    margin: 0;
+}
+h4{
+    font-size: 2.6rem;
+}
+
+/*-----------------------------Utilidades----------------------------*/
+.seccion{
+    margin-top: 12rem !important; 
+    margin-bottom: 5rem !important;
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.fw-400{
+    font-weight: 400;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.seccion h2::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+    margin-bottom: 2rem;
+    background-color: #303686;
+}
+
+.boton{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: block;
+    flex: 0 0 100%;
+    border: none;
+}
+
+@media (min-width:481px) {
+    .boton{
+        display: inline-block;
+        padding: 1rem 10rem;
+        flex: 0 0 auto;
+    }
+}
+
+.boton-general{
+    background-color: #ff9d00 ;
+}
+
+.boton-interno{
+    background-color: #303686;
+}
+
+/*----------------------------Header responsive-----------------------*/
+
+.site-header.inicio{
+    background-image: url(../imgs/Header-UPNFM-3.5.2-movil.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 50rem;
+    padding-top: 1rem;
+}
+
+@media (min-width:481px) {
+
+    .site-header.inicio{
+        background-image: url(../imgs/Header-UPNFM-3.5.3.jpg);
+        min-height: 70rem;
+        padding-top: 3rem;
+    }
+
+}
+
+.contenedor-header-padre{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100vh;
+}
+
+.contenedor-header-hijo{
+    flex-basis: calc(45%);
+    text-align: center;
+    align-items: center;
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+}
+
+.contenedor-header-hijo-medio{
+    flex-basis: calc(10%);
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-header-hijo h1{
+    margin: 0 auto;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.contenedor-header-hijo h2{
+    margin: 0 auto;
+    font-size: 2rem;
+    max-width: 70rem;
+    color: #fff;
+}
+
+@media (min-width:481px) {
+    .contenedor-header-hijo h1{
+        font-size: 3.5rem;
+    }
+    .contenedor-header-hijo h2{
+        color: #303686;
+        font-size: 3.3rem;
+    }
+}
+
+@media (max-width:480px) {
+    .contenedor-header-hijo h1::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 0.5rem;
+        background-color: #faf400;
+    }
+}
+
+.contenedor-header-hijo:last-of-type{
+    background-color: rgba(255, 157, 0, 0.4);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+@media (min-width:481px) {
+    .contenedor-header-hijo:last-of-type{
+        background-color: rgba(255, 157, 0, 0);
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        line-height: 1.8;
+    }
+}
+
+.navegacion a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    display: block;
+    align-items: center;
+}
+
+@media (min-width:481px) {
+    .navegacion a{
+        color: #000;
+        font-size: 1.8rem;
+        display: inline-block;
+        margin-right: 2rem;
+    }
+
+    .navegacion a:last-of-type{
+        margin-right: 0;
+    }
+}
+
+@media (min-width:1025px) {
+    .navegacion a{
+        margin-right: 5rem;
+    }
+}
+
+.navegacion a:hover{
+    color: #ff9d00;
+}
+
+.titulos-padre{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+@media (min-width:481px) {
+    .titulos-padre{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+  
+    .titulos-hijo{
+        flex-basis: calc(50% - 2rem);
+        text-align: center;
+    }
+}
+/*---------------------------------------------------------------
+------------------------------Header Secundario------------------
+-----------------------------------------------------------------*/
+
+.header-dividido{
+    display: flex;
+    min-height: 16rem;
+    justify-content: space-between;
+}
+
+.lado:first-of-type{
+    flex-basis: calc(30% - .3rem);
+    background: url(../imgs/panorama2_upn.jpg);
+    box-shadow: inset 0 0 0 1000px rgba(232, 150, 50, .6);
+    background-position: center center;
+    background-size: cover;
+}
+.lado:last-of-type
+{
+    flex-basis: calc(70% - .3rem);
+    background: url(../imgs/Captura.png);
+    box-shadow: inset 0 0 0 1000px rgba(57,60,155,.6);
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+.lado-contenido{
+    display: flex;
+    
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lado-contenido img{
+    transform: rotate(270deg);
+    width: 35rem;
+}
+
+@media (min-width:481px){
+    .lado-contenido img{
+        transform: rotate(0deg);
+    }
+}
+
+.lado-contenido2{
+    display: flex;
+    align-items: center;
+}
+
+.lado-contenido2 nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+@media (min-width:481px) {
+    .lado-contenido2 nav {
+        flex-direction: row;
+    }
+}
+
+.lado-contenido2 a{
+    text-decoration: none;
+    color: white ;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+@media (min-width:1025px) {
+    .lado-contenido2 a{
+        font-size: 3rem;
+    }
+}
+
+.lado-contenido2 a:hover{
+    color:#e89632;
+}
+/* ----------------------------------------------------------------------- */
+
+.inicio{
+    background: url(../imgs/panorama_upn.jpg);
+    background-position: center center;
+    background-size: cover;
+
+}
+.inicio h1{
+    margin: 0;
+    color: white;
+    position: relative;
+}
+
+.relleno{
+    background: url(../imgs/panorama_upn.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.relleno::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.relleno h1{
+    margin: 0;
+    position: relative;
+}
+
+.relleno h2{
+    position: relative;
+}
+
+.relleno a{
+    position: relative;
+}
+
+
+
+/*---------------------------------------------------------------
+-------------------------Fin segundo Header----------------------
+-----------------------------------------------------------------*/
+
+
+/*-------------------Sección de Nosotros responsive--------------*/
+
+.cont-mis-vis{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: 0.1rem solid #ff9d00;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+
+@media (min-width:1025px) {
+    .cont-mis-vis{
+        flex-direction: row;
+    }
+    
+    .cont-mis-vis:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+.mis-vis{
+    flex-basis: calc(50% - 2rem);
+    text-align: center;
+}
+
+.cont-mis-vis2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    border-radius: 1rem;
+    border: 0.1rem solid #ff9d00;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+
+@media (min-width:1025px) {
+    .cont-mis-vis2{
+        flex-direction: row;
+    }
+    
+    .cont-mis-vis2:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+.mis-vis2{
+    flex-basis: calc(50% - 2rem);
+    text-align: center;
+}
+
+.mis-vis h3::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #303686;
+}
+
+.mis-vis2 h3::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #303686;
+}
+
+.img-mis-vis{
+    max-width: 80%;
+}
+
+@media (min-width:481px) and (max-width:1025px){
+    .img-mis-vis{
+        max-width: 60%;
+    }
+}
+
+.boton-gen{
+    display: flex;
+    justify-content: center;
+}
+
+/*-----------------------Sección de Carreras---------------------*/
+
+.carreras-padre{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 1rem;
+    border: 0.1rem solid #ff9d00;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+
+.padre-inverso{
+    flex-direction: column-reverse;
+}
+
+@media (min-width:481px) {
+    .carreras-padre{
+        flex-direction: row;
+        align-items: center;
+        border-radius: 1rem;
+        border: 0.1rem solid #ff9d00;
+        padding: 2rem;
+        box-shadow: 0.5rem 0.5rem 1rem #777;
+    }
+
+    .carreras-hijo{
+        flex-basis: calc(50% - 2rem);
+        text-align: center;
+    }
+
+    .padre-inverso{
+        flex-direction: row;
+    }
+}
+
+
+
+
+.carreras-hijo h3::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #303686;
+}
+
+.img-carrera{
+    max-width: 60%;
+    border-radius: 50%;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+
+/*-----------------------Seccion de Extensiones----------------------*/
+
+.contenedor-extensiones{
+    background-image: url(../imgs/ateneo2.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3rem;
+}
+
+.seccion-especial{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.extension1{
+    color: #fff;
+}
+
+@media (min-width:481px){
+    .extension1{
+        margin-left: 5rem;
+    }
+    
+}
+
+.contenedor-ateneo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+
+.ateneo-hijo{
+    text-align: center;
+    color: #fff;
+    border-radius: 1rem;
+    border: 0.1rem solid #ff9d00;
+    background-color: rgba(51, 51, 51, 0.8);
+    box-shadow: 0.5rem 0.5rem 1rem #333;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+
+@media (min-width:1025px) {
+    .contenedor-ateneo{
+        flex-direction: row;
+    }
+
+    .ateneo-hijo{
+        flex-basis: calc(33.3% - 2rem);
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.ateneo-hijo h3{
+    font-size: 2rem;
+}
+
+.ateneo-hijo h3::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #303686;
+}
+
+.solo-ext{
+    margin: 3rem auto;
+}
+
+/*----------------------Sección de Docentes--------------------------*/
+
+
+.contenedor-maestros{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.maestros{
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    text-align: center;
+    padding: 1rem;
+    border: 0.1rem solid #ff9d00;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+
+.contenedor-maestros2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.maestros2-1{
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border: 0.1rem solid #ff9d00;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+
+.maestros2-2{
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border: 0.1rem solid #ff9d00;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+
+@media (min-width:481px) {
+    .contenedor-maestros{
+        flex-direction: row;
+    }
+    
+    .maestros{
+        flex-basis: calc(33.3% - 1rem);
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .maestros-info{
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+@media (min-width:481px) {
+    .contenedor-maestros2{
+        flex-direction: row;
+    }
+    
+    .maestros2-1{
+        flex-basis: calc(33.3% - 1rem);
+        padding: 0 auto;
+        margin: 1rem 0.5rem 1rem auto;
+        text-align: center;
+    }
+
+    .maestros2-2{
+        flex-basis: calc(33.3% - 1rem);
+        padding: 0 auto;
+        margin: 1rem auto 1rem 0.5rem;
+        text-align: center;
+    }
+}
+
+.maestros-info h3::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #303686;
+}
+
+.radio-img{
+    border-radius: 50%;
+    max-width: 80%;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+    margin-top: 2rem;
+}
+
+.maestros-info h3{
+    font-size: 2rem;
+}
+
+.maestros-info p{
+    line-height: 1;
+}
+
+.centrar h2{
+    margin-top: 1rem;
+}
+
+/*-------------------------------------------------------------
+-----------------------Fin pagina Index------------------------
+---------------------------------------------------------------*/
+
+
+
+
+/*-------------------------------------------------------------
+------------------------Pagina docentes------------------------
+---------------------------------------------------------------*/
+
+
+
+.maestros span{
+    cursor: pointer;
+}
+
+.maestros2-1 span{
+    cursor: pointer;
+}
+
+.maestros2-2 span{
+    cursor: pointer;
+}
+
+.emergente span{
+    cursor: pointer;
+}
+
+/*---------------------Animaciones docentes---------------------*/
+
+.fondo{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.fondo.visible{
+    visibility: visible;
+}
+
+.emergente{
+    background-color: #f8f8f8;
+    box-shadow: 0rem 0rem .5rem rgba(0, 0, 0, .3);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    max-width: 90vw;
+
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.emergente .btn-salir{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    display: inline-block;
+    text-align: right;
+    color: #fff;
+    background-color: red;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    transition: .3s ease all;
+}
+
+.emergente .btn-salir:hover{
+    background-color: rgba(255, 0, 0, .4);
+}
+
+.emergente .radio-img2{
+    max-width: 30%;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.emergente h2{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    opacity: 0;
+}
+
+.emergente h3{
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    opacity: 0;
+}
+
+.emergente p{
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 500;
+    margin-top: .5rem;
+    opacity: 0;
+}
+
+/*-------------------------animaciones-------------------------*/
+
+.emergente.visible{
+    opacity: 1;
+    transform: scale(1);
+}
+.emergente.visible .radio-img2{
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+
+.emergente.visible h2{
+    animation: entradaTitulo .8s ease 1s forwards;
+}
+
+.emergente.visible h3{
+    animation: entradaTitulo .8s ease 1s forwards;
+}
+
+.emergente.visible p{
+    animation: entradaTitulo .8s ease 1s forwards;
+}
+
+@keyframes entradaTitulo {
+    from{
+        transform: translateY(-2.5rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+/*-------------------------------------------------------------
+----------------------Fin pagina docentes----------------------
+---------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------
+-------------------------Pagina Nosotros-----------------------
+---------------------------------------------------------------*/
+
+.relleno h1{
+    margin: 2rem auto;
+}
+
+/*--------------------------Encabezado-------------------------*/
+
+.titulos-nosotros-padre{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titulo1{
+    text-align: center;
+    border: 0.1rem solid #ff9d00;
+    border-radius: .5rem;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 1rem;
+}
+
+.titulo2{
+    text-align: center;
+    border: 0.1rem solid #ff9d00;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 1rem;
+}
+
+@media (min-width:481px) {
+    .titulos-nosotros-padre{
+        flex-direction: row;
+    }
+
+    .titulo1{
+        flex-basis: calc(30% - 1rem);
+    }
+
+    .titulo2{
+        flex-basis: calc(70% - 1rem);
+    }
+}
+
+.titulo1 h2{
+    color: #ff9d00;
+}
+
+.titulo2 h3{
+    position: relative;
+    font-size: 2.5rem;
+    line-height: 2;
+}
+
+/*---------------Mensaje Rector y Jefe depto---------------------*/
+
+.mensaje-fefe-padre{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 3rem auto;
+    border: 0.1rem solid #ff9d00;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+    border-radius: 1rem;
+}
+
+.mensaje-jefe-hijo{
+    text-align: center;
+}
+
+.mensaje-jefe-hijo h3::after{
+    content: '';
+    display:flex;
+    height: 0.5rem;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #303686;
+
+}
+
+@media (min-width:481px) {
+    .mensaje-jefe-hijo h3::after{
+        width: 50%;
+    }
+}
+
+@media (min-width:780px) {
+    .mensaje-jefe-hijo h3::after{
+        width: 40%;
+    }
+}
+
+@media (min-width:1025px) {
+    .mensaje-jefe-hijo h3::after{
+        width: 30%;
+    }
+}
+
+.radio-img3{
+    border-radius: 50%;
+    margin: 1rem;
+    max-width: 80%;
+    box-shadow: .5rem .5rem 1rem #777;
+}
+
+/*---------------------nosotros--------------------------------*/
+
+.contenedor-nosotros-padre{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 0.1rem solid #ff9d00;
+    box-shadow: .5rem .5rem 1rem #777;
+    margin: 4rem auto;
+}
+
+.contenedor-nosotros-hijo{
+    flex-basis: calc(50% - 3rem);
+    margin: 2rem;
+}
+
+@media (min-width:481px) {
+    .contenedor-nosotros-padre{
+        flex-direction: row;
+    }
+}
+
+.radio-img-nosotros{
+    border-radius: 5rem;
+    max-width: 80%;
+    box-shadow: .5rem .5rem 1rem #777;
+}
+
+.contenedor-nosotros-padre h3::after{
+    content: '';
+    display:flex;
+    height: 0.5rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #303686;
+}
+
+/*-------------------Mision y Vision---------------------------*/
+
+.contenedor-mis-vis-padre{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.contenedor-mis-vis-hijo{
+    flex-basis: calc(50% - 3rem);
+    border: 0.1rem solid #ff9d00;
+    box-shadow: .5rem .5rem 1rem #777;
+    margin: 1rem 0;
+    border-radius: 1rem;
+}
+
+@media (min-width:481px) {
+    .contenedor-mis-vis-padre{
+        flex-direction: row;
+    }
+}
+
+.contenedor-mis-vis-hijo h3::after{
+    content: '';
+    display:flex;
+    height: 0.5rem;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #303686;
+
+}
+
+/*-------------------------------------------------------------
+----------------------Fin pagina Mosotros----------------------
+---------------------------------------------------------------*/
+
+/*-------------------------------------------------------------
+-------------------------pagina Contacto-----------------------
+---------------------------------------------------------------*/
+
+.seccion-especial2{
+    width: 95%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.contacto-fin p{
+    font-size: 1.5rem;
+    color: #444;
+    margin: 2rem 0 0 0;
+}
+
+legend{
+    font-size: 2rem;
+    color: #666;
+}
+
+label{
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+input:not([type="submit"]),
+textarea,
+select{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.enviar{
+    margin: 3rem auto;
+    display: block;
+ }
+ 
+ .enviar:hover{
+     cursor: pointer;
+ }
+ 
+/*--------------------------------------------------------------
+--------------------------Footer General------------------------
+----------------------------------------------------------------*/
+
+.footer{
+    background-image: url(../imgs/footer\ 3.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding-top: 5rem;
+}
+
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 95%;
+    text-align: center;
+}
+
+.final{
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width:481px) {
+    .contenedor-footer{
+        flex-direction: row;
+    }
+    
+    .final{
+        flex-basis: calc(33.3% - 2rem);
+    }
+}
+
+.final p{
+    line-height: 3rem;
+}
+
+.ima{
+    border: 0.3rem solid #888;
+    box-shadow: 0.4rem 0.4rem 1rem #000;
+    width: 70%;
+}
+
+.footer:last-of-type{
+    padding-bottom: 0;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.redes-hija{
+    flex-basis: calc(25% - 1rem);
+}
+
+@media (min-width:481px) {
+    .redes-hija:first-of-type{
+        margin-left: 5rem;
+    }
+    
+    .redes-hija:last-of-type{
+        margin-right: 5rem;
+    }
+}
+
+.foo-ima{
+    max-width: 30%;
+}
+
+.centro{
+    text-align: center;
+    color: #fff;
+    margin: 0;
+  
+}

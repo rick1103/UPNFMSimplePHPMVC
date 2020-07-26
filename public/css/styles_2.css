@@ -1,0 +1,890 @@
+/* Indispensable */
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+/* @media (max-width:1441px){
+    html{
+        box-sizing: border-box;
+        font-size: 42.5%;
+    }
+
+} */
+@media (max-width:801px){
+    html{
+        box-sizing: border-box;
+        font-size: 52.5%;
+    }
+    .contenedor-investigacion{
+        flex-direction: column-reverse;
+    }
+    .contenedor{
+        max-width: 90% !important;
+    }
+
+
+}
+@media(max-width: 481px){
+    html{
+        box-sizing: border-box;
+        font-size: 37.5%;
+    }
+
+    .contenedor-anio span{
+        font-size: 60%;
+        overflow-wrap: break-word;
+    }
+    .significado{
+        font-size: 80%;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+    }
+    
+    .contenedor-significado-colores{
+        justify-content: center;
+    }
+
+   
+    .lado-contenido2 nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        
+        text-align: center;
+    }
+    .lado-contenido a{
+    
+        transform: rotate(-90deg);
+    }
+    .lado-contenido img{
+        min-width: 20rem;
+        padding: 0;
+        margin: 0;
+    }
+    .movil, .extensiones, .contenedor-investigacion{
+        font-size: 150%;
+    }
+
+    
+    
+  
+    
+
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+/* Globales */
+img{
+    max-width: 100%;
+}
+.contenedor{
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h1{
+    font-size: 3.8rem;
+
+}
+h2{
+
+    font-size: 3.4rem;
+}
+h3{
+
+    font-size: 3rem;
+}
+h4{
+
+    font-size: 2.6rem;
+}
+/* UTILIDADES */
+
+.centrar-texto{
+    text-align: center;
+}
+
+
+/* Header */
+/* .header-supremo{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 60rem;
+} */
+
+.header-dividido{
+    display: flex;
+    min-height: 16rem;
+    /* height: 14rem; */
+    justify-content: space-between;
+}
+
+.lado:first-of-type{
+    flex-basis: calc(30% - .3rem);
+    background: url(../imgs/panorama2_upn.jpg);
+    /* background-color: #e89632; */
+    box-shadow: inset 0 0 0 1000px rgba(232, 150, 50, .6);
+    background-position: center center;
+    background-size: cover;
+}
+.lado:last-of-type
+{
+    flex-basis: calc(70% - .3rem);
+    background: url(../imgs/Captura.png);
+    /* background-color: #393c9b; */
+    box-shadow: inset 0 0 0 1000px rgba(57,60,155,.6);
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+.lado-contenido{
+    display: flex;
+    
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.lado-contenido img{
+    
+    width: 35rem;
+}
+.lado-contenido2{
+    display: flex;
+    align-items: center;
+}
+.lado-contenido2 a{
+    text-decoration: none;
+    color: white ;
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+.lado-contenido2 a:hover{
+    color:#e89632;
+}
+/* ----------------------------------------------------------------------- */
+@media(max-width:481px){
+    .relleno, .relleno h1{
+        margin: 0 !important;
+    }
+    
+    .titulo-tecnica{
+        background: url(../imgs/panorama_upn.jpg);
+    background-position: center center;
+    background-size: cover;
+
+    }
+    .carreras{
+        flex-direction: column;
+    }
+    .orientacion2 h2{
+        transform: rotate(0deg) !important;
+    }
+    .orientacion2{
+        writing-mode: unset !important;
+    }
+    .titulo-tecnica{
+        text-align: center;
+    }
+    .inicio{
+        background: none !important;
+    
+    }
+
+    .carrera{
+        min-height: 15rem;
+    }
+
+}
+
+
+.inicio{
+    background: url(../imgs/panorama_upn.jpg);
+    background-position: center center;
+    background-size: cover;
+
+}
+.inicio h1{
+    margin: 0;
+    color: white;
+}
+
+
+
+.relleno{
+    background: url(../imgs/panorama_upn.jpg);
+    background-position: center center;
+    background-size: cover;
+    /* height: calc(100vh - 14rem); */
+    /* max-height: 20rem; */
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.relleno h1{margin: 0;}
+
+
+.carreras{
+    display: flex;
+}
+.contenido-carrera{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.titulo-tecnica{
+    flex-basis: 10rem;
+}
+.carreras{
+    flex-basis: calc(100% - 10rem);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.orientacion{
+    display: flex;
+    flex-basis: calc(35% - 9rem);
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.orientacion a{
+    padding-top: 2.5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 900;
+}
+.orientacion2{
+    background-color: white;
+    color: rgba(57,60,155,.8) !important;
+    flex-basis: 8rem;
+    writing-mode: vertical-lr;
+    text-align: center;
+    align-items: center;
+}
+.orientacion2 h2{
+    transform: rotate(-180deg);
+    padding: 0;
+    margin: 0;
+}
+/* Carrera pertenece a orientacion */
+.carrera{
+    flex-basis: calc(25% - 1rem);
+    border-style: solid;
+}
+.info-proposito{
+    flex-basis: calc(65% - 1rem);
+    padding-left: 2rem;
+    color: white;
+    background-color: rgba(57,60,155,.8);
+}
+.info-proposito h2, .info-proposito p, .info-proposito ul{
+    margin: 0 0 1rem 0;
+
+}
+/* Info pertenece a Orientacion */
+
+
+.electronica{
+    /* border-bottom-left-radius: 2rem; */
+    background: url(../imgs/imagen_electronica.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.electricidad{
+    /* border-bottom-left-radius: 2rem; */
+    background: url(../imgs/imagen_electricidad.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.madera{
+    /* border-bottom-left-radius: 2rem; */
+    background: url(../imgs/imagen_madera.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.industrial{
+    /* border-bottom-left-radius: 2rem; */
+    background: url(../imgs/imagen_industrial.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+/* FOOTER */
+footer{
+    
+    background-color:#393c9b;
+}
+.footer-master{
+    display: flex;
+    
+}
+.info-footer{
+    flex-basis: 50%;
+    color: white;
+    justify-content: space-between;
+}
+.info-footer p{
+    margin: 0;
+}
+/* Objetivo de la carrera */
+
+
+
+.objetivo-master{
+
+    border-radius: 4rem;
+    padding:0 2rem 0 2rem  ;
+    /* color: rgba(57,60,155,.8); */
+    margin: 2rem auto ;
+    line-height: 1.6;
+
+}
+
+.objetivo{
+    flex-basis: calc(50% - 1rem);
+    
+}
+
+.texto-entrada h3::after{
+    content: '';
+    display: block;
+    width: 90%;
+    min-height: 0.5rem;
+    background-color: rgba(57,60,155,.8);
+    margin-top: 1rem;
+
+}
+.titulo{
+    color: white;
+    text-decoration: none;
+    /* font-size: 1.8rem; */
+    font-weight: 700;
+    padding: 1rem 3rem;
+    display: inline-block;
+    margin-top: 3rem;
+    text-align: center;
+} 
+.titulo-azul{
+    background-color: rgba(57,60,155,.8);
+}
+.esquina{
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+
+/* ELECTRONICA */
+
+.contenedor-anio{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border: 0.1rem solid #ff9d00;
+    border-radius: 0em;
+    padding: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+.anio{
+    flex-basis: calc(10% - 1rem);
+    background-color: rgba(57,60,155,.8);
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: nowrap;
+ 
+    
+}
+.anio span{
+    color: white;    
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    font-weight: 300;
+    font-size: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contenedor-periodo{
+    flex-basis: calc(90% - 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+}
+.periodo{
+    display: flex;
+    flex-basis: calc(33.3% - 1rem);
+    
+    justify-content: space-between;
+    margin: .5rem;
+
+}
+.descripcion-periodo{
+    flex-basis: calc(20% - 1rem);
+    background-color: rgba(232, 150, 50, .8);
+    display: flex;
+    color: white;
+    font-size: 2rem;
+
+}
+.descripcion-periodo span{
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contenedor-clases{
+    display: flex;
+    flex-basis: calc(80% - 1rem);
+    justify-content: space-between;
+    align-items: center;
+}
+.clases{
+    flex-basis: calc(20% - 1rem);
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid #ff9d00;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+    line-height: normal;
+    min-height: 9rem;
+    justify-content: space-evenly;
+    cursor: pointer;
+    
+
+}
+.top-bottom-clase{
+    flex-basis: 20%;
+    font-size: 1rem;
+}
+.nombre-clase{
+    flex-basis: 60%;
+    font-size: 1rem;
+    line-height: inherit;
+    font-weight: 900;
+}
+.largo{
+    word-break: break-all;
+}
+.borrar{
+    visibility: hidden;
+}
+.top-bottom-clase:last-of-type{
+    color: white;
+}
+.pedagogica{
+    background-color: rgb(148, 49, 38);
+}
+.general{
+    background-color: rgb(91, 44, 111);
+}
+.eti{
+    background-color: rgb(26, 82, 118);
+}
+.tecnologica{
+    background-color: rgb(30, 132, 73);
+}
+.practica{
+    background-color: rgb(241, 196, 15);
+}
+.contenedor-significado-colores{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem 0 2rem 0;
+    border: 0.1rem solid #ff9d00;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+    border-radius: 1rem;
+}
+.significado{
+    flex-basis: calc(33% - 1rem);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.color{
+    margin-left: 1rem;
+   flex-basis: 20%;
+   height: 2rem;
+}
+
+/* -----------------------------POP UP------------------------------ */
+
+.popup{
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    text-transform: uppercase;
+    flex-direction: column;
+    border: 0.1rem solid #ff9d00;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    background-color: white;
+    
+
+    
+}
+
+.clases.clase-seleccionada{
+    flex-basis: 6rem;
+    
+}
+.clases.clase-seleccionada span{
+    font-size: 1.5rem;
+    
+    
+}
+.heading-requisitos{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 700;
+    justify-content: space-around;
+}
+.contenedor-clases-requeridas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.requisitos{
+    padding: .5rem;
+    flex-basis: calc(50% - .5rem);
+    flex-direction: column;
+    border: 0.1rem solid #ff9d00;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+
+}
+.mc{
+    margin-bottom: .5rem;
+}
+.boton{
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1rem 5rem;
+    /* display: inline-block; */
+    margin-top: 1.5rem;
+    text-align: center;
+    background-color: rgba(57,60,155,.8);
+    border-radius: 1rem;
+    /* max-width: 40rem; */
+
+} 
+.cb{
+    align-self: center;
+    cursor: pointer;
+}
+.overlay{
+    background: rgba(0,0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+.overlay.active{
+    visibility: visible;
+}
+/*------------------------------Footer-------------------------------*/
+
+.footer{
+    background-image: url(../imgs/footer\ 3.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding-top: 5rem;
+}
+
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 95%;
+    text-align: center;
+}
+
+.final{
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width:481px) {
+    .contenedor-footer{
+        flex-direction: row;
+    }
+    
+    .final{
+        flex-basis: calc(33.3% - 2rem);
+    }
+}
+
+.final p{
+    line-height: 3rem;
+}
+
+.ima{
+    border: 0.3rem solid #888;
+    box-shadow: 0.4rem 0.4rem 1rem #000;
+    width: 70%;
+}
+
+.footer:last-of-type{
+    padding-bottom: 0;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.redes-hija{
+    flex-basis: calc(25% - 1rem);
+}
+
+@media (min-width:481px) {
+    .redes-hija:first-of-type{
+        margin-left: 5rem;
+    }
+    
+    .redes-hija:last-of-type{
+        margin-right: 5rem;
+    }
+}
+
+.foo-ima{
+    max-width: 30%;
+}
+
+.centro{
+    text-align: center;
+    color: #fff;
+    margin: 0;
+  
+}
+/* EXTENSIONES */
+.contenedor-extensiones{
+    background: url(../imgs/ateneo2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.contenedor-extensiones h1{
+    margin: 0em;
+    color: white;
+}
+.extensiones{
+    color: white;
+    padding-bottom: 2rem;
+    
+}
+.ateneo-hijo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    border: 0.1rem solid #ff9d00;
+    background-color: rgba(51, 51, 51, 0.8);
+    box-shadow: 0.5rem 0.5rem 1rem #333;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+.hh{
+    margin-bottom: 8rem;
+    
+}
+.ateneo-hijo-lado h2{
+    margin: 0;
+}
+.ateneo-hijo-lado{
+    flex-basis: calc(65% - 1rem);
+
+}
+.ateneo-hijo-lado-img{
+    flex-basis:calc(35% - 1rem);
+    max-width: 70%;
+}
+/* SE PARTE DE NOSOTROS */
+
+.contenedor-actividades{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+.actividad-lado{
+    line-height: 1.5;
+    
+}
+.actividad-lado h3{
+    text-align: center;
+    margin: 0;
+}
+.img-actividad img{
+    box-shadow: 0.5rem 0.5rem 1rem #333;
+    border-radius: 1rem;
+}
+.actividad{
+    flex-basis: calc(33.3% - 1rem);
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    border: 0.1rem solid #ff9d00;
+    background-color: rgba(51, 51, 51, 0.8);
+    box-shadow: 0.5rem 0.5rem 1rem #333;
+    padding: 2rem;
+
+}
+
+@media (max-width:481px) {
+    .contenedor{
+        max-width: 95%;
+    }
+    .alrevez{
+        flex-direction: column-reverse !important ;
+    }
+    .ateneo-hijo{
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .contenedor-extensiones h2{
+        text-align: center;
+    }
+    .contenedor-actividades{
+        flex-wrap: wrap;
+    }
+    .actividad{
+        flex-basis: 100%;
+        margin-bottom: 4rem;
+    }
+    
+}
+
+/* investigaciones */
+
+.contenedor-investigaciones h1::after, 
+.contenedor-investigaciones h2::after, 
+.investigacion h2::after,
+.investigacion h3::after{
+    content: '';
+    display: block;
+    width: 90%;
+    min-height: 0.5rem;
+    background-color: rgba(57,60,155,.8);
+    margin-top: 1rem;
+
+}
+.contenedor-investigacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.1rem solid #393c9b;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+    border-top-right-radius: 9rem;
+    border-bottom-left-radius: 9rem;
+    padding: 4rem;
+}
+.investigacion{
+    flex-basis: calc(50% - 1rem);
+    line-height: normal;
+}
+.investigacion h2{
+    margin: 0;
+}
+.investigacion ol li{
+
+    font-size: 150%;
+    background-color: rgba(57,60,155,.8);
+    padding: 2rem 4rem;
+    margin: 1rem;
+    list-style: none;
+    color: white;
+    cursor: pointer;
+}
+.investigacion ol li:hover{
+    color: rgb(232, 150, 50);
+}
+
+.contenedor-investigacion-popup{
+    padding: .5rem;
+    
+    flex-direction: column;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+    line-height: normal;
+
+}
+.azul{
+    border: 0.1rem solid #393c9b;
+    margin-bottom: .5rem;
+
+}
+.contenedor-investigaciones{
+    margin-bottom: 4rem;
+}
+
+@media(max-width:481px){
+    .contenedor-investigacion{
+        flex-direction: column-reverse;
+    }
+    .investigacion img{
+        border-radius: 2rem;
+    }
+
+}
+
+.contenedor_log{
+
+    display: flex;
+    justify-content: center;
+    margin: 10rem auto;
+    border-radius: 2rem;
+    border: 0.1rem solid #ff9d00;
+    /* background-color: rgba(51, 51, 51, 0.8); */
+    box-shadow: 0.5rem 0.5rem 1rem #333;
+    padding: 2rem;
+    width: 30vw;
+}
+.separado{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% + 2rem);
+    
+}
+
+.separado-l{
+    flex-basis: calc(50% - 1rem);
+
+}
+.pointer{cursor: pointer;}
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+
+}

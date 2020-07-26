@@ -1,0 +1,3 @@
+CREATE SCHEMA `nw202002` ;
+CREATE USER 'nw202002'@'%' IDENTIFIED BY 'n3g0c10sw3b';
+GRANT ALL ON demoalgorith.* TO 'nw202002'@'%';
