@@ -23,6 +23,6 @@
       $data["programas"] = obtenerFuncionesPorFiltro($filter,'%');
       renderizar("security/programas", $data );
   }
-
+  addJsRef("public/js/app.js");
   run();
 ?>

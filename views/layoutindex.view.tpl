@@ -45,7 +45,7 @@
 
     
 
-    <script src="JavaScript/utilidades.js"></script>
+    
     
     <footer class="footer">
         <div class="contenedor-footer">
@@ -89,6 +89,10 @@
 
         <p class="centro">Todos los derechos reservados &copy;</p>
     </footer>
+
+    {{foreach js_ref}}
+                <script src="{{uri}}"></script>
+            {{endfor js_ref}}
 </body>
 
 </html>

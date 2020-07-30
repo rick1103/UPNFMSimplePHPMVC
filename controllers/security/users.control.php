@@ -24,11 +24,14 @@ function run(){
     $data["fltEmail"] = $filter;
     $data["usuarios"] = obtenerUsuarioPorFiltro($filter,'%');
     renderizar("security/users", $data );
-    
 }
 
 addJsRef("public/js/app.js");
 
+addJsRef("http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js");
+
+
 run();
 
 ?>
+

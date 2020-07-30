@@ -1,44 +1,61 @@
+<section class="relleno">
+  <h1 class="fw-400 centrar-texto">Departamento de Técnica Industrial</h1>
 
-<h1>
-  Gestión de Roles
-</h1>
-<div class="row depth-1 m-padding">
-  <form action="index.php?page=roles" method="post" class="col-md-8 col-offset-2">
-      <div class="row s-padding">
-        <label class="col-md-1" for="fltDsc">Roles:&nbsp;</label>
-        <input type="text" name="fltDsc"  class="col-md-8"
-              id="fltDsc" placeholder="Codigo de roles" value="{{fltDsc}}" />
-        <button class="col-md-3" id="btnFiltro"><span class="ion-refresh">&nbsp;Actualizar</span></button>
+  <div class="titulos-nosotros-padre seccion-especial">
+      <div class="titulo1">
+          <h2 class="fw-400 centrar-texto">Gestión de Roles</h2>
       </div>
-  </form>
+
+      <div class="titulo2">
+          <h3 class="centrar-texto">Mantenimiento de Roles</h3>
+      </div>
+  </div>
+</section>
+
+
+
+<div class="contenedor">
+  
+        <input type="text" name="fltEmail"  class="buscador sombra" id="fltEmail" placeholder="Buscar Roles" value="{{fltDsc}}" />
+        
+
+  <div class="contenedor-tabla">
+    <table class="listado-tabla">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nombre</th>
+          <th class="">Estado</th>
+          <th><a href="index.php?page=rol&rolescod&mode=INS" class="btn depth-1 s-margin">
+            <span class="ion-plus-circled"></span>
+            </a></th>
+        </tr>
+      </thead>
+      <tbody class="">
+        {{foreach roles}}
+        <tr>
+          <td>{{rolescod}}</td>
+          <td>{{rolesdsc}}</td>
+          <td class="sd-hide">{{rolesest}}</td>
+          <td class="th-a-icono">
+            <a href="index.php?page=rol&rolescod={{rolescod}}&mode=UPD" class="btn depth-1 s-margin"><span class="ion-edit"></span></a>
+            <a href="index.php?page=rol&rolescod={{rolescod}}&mode=DSP" class="btn depth-1 s-margin"><span class="ion-eye"></span></a>
+          </td>
+        </tr>
+        {{endfor roles}}
+      </tbody>
+    </table>
+  </div>
 </div>
-<div class="row depth-1">
-  <table class="col-md-12">
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th>Nombre</th>
-        <th class="sd-hide">Estado</th>
-        <th><a href="index.php?page=rol&rolescod&mode=INS" class="btn depth-1 s-margin">
-          <span class="ion-plus-circled"></span>
-          </a></th>
-      </tr>
-    </thead>
-    <tbody class="zebra">
-      {{foreach roles}}
-      <tr>
-        <td>{{rolescod}}</td>
-        <td>{{rolesdsc}}</td>
-        <td class="sd-hide">{{rolesest}}</td>
-        <td class="center">
-          <a href="index.php?page=rol&rolescod={{rolescod}}&mode=UPD" class="btn depth-1 s-margin"><span class="ion-edit"></span></a>
-          <a href="index.php?page=rol&rolescod={{rolescod}}&mode=DSP" class="btn depth-1 s-margin"><span class="ion-eye"></span></a>
-        </td>
-      </tr>
-      {{endfor roles}}
-    </tbody>
-  </table>
-</div>
+
+
+
+
+
+
+
+
+
 <script>
     $().ready(
     function(){

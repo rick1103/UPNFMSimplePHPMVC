@@ -1,78 +1,93 @@
-<h1>Gestión de Usuario</h1>
-<div class="row depth-1 m-padding">
-  <h2>{{modeDesc}}</h2>
-</div>
-<div class="row depth-1 m-padding">
+<section class="relleno">
+  <h1 class="fw-400 centrar-texto">Departamento de Técnica Industrial</h1>
+
+  <div class="titulos-nosotros-padre seccion-especial">
+      <div class="titulo1">
+          <h2 class="fw-400 centrar-texto">Usuario</h2>
+      </div>
+
+      <div class="titulo2">
+          <h2 class="centrar-texto">{{modeDesc}}</h2>
+      </div>
+  </div>
+</section>
+
+
+
+<div class="contenedor ">
   {{if haserrores}}
-    <ul class="alert alert-danger depth-1 m-padding" style="list-style:none;">
+    <ul>
       {{foreach errores}}
-        <li>
+        <li class="showerrors">
           {{this}}
         </li>
       {{endfor errores}}
     </ul>
   {{endif haserrores}}
-  <form action="index.php?page=user" method="post" class="col-sm-8 col-sm-offset-2 col-md-6 col-offset-3">
+  <form action="index.php?page=user" method="post" class="contenedor_log" style="margin-top:1rem;">
     <input type="hidden" name="mode" value="{{mode}}"  />
     <input type="hidden" name="tocken" value="{{tocken}}"  />
     <input type="hidden" name="usrcod" value="{{usrcod}}"  />
     <div class="row">
-    <div class="row s-padding">
-      <label class="col-sm-5">Correo Electrónico</label>
-      <input class="col-sm-7" {{readonly}} type="text" name="txtCorreo" id="txtCorreo" value="{{useremail}}" placeholder="correo@electron.ico" />
+    <div class="centrar-texto">
+        <h2>{{modeDesc}}</h2>
     </div>
-    <div class="row s-padding">
-      <label class="col-sm-5">Nombre Completo</label>
-      <input class="col-sm-7" {{readonly}} type="text" name="txtName" id="txtName" value="{{username}}" placeholder="Nombre Completo" />
+    <div class="separado">
+      <label class="separado-l">Correo Electrónico</label>
+      <input class="separado-l" {{readonly}} type="text" name="txtCorreo" id="txtCorreo" value="{{useremail}}" placeholder="correo@electron.ico" />
     </div>
-    <div class="row s-padding">
-      <label class="col-sm-5">Tipo de Usuario</label>
-        <span class="select col-sm-7"><select {{if readonly}}disabled readonly="readonly" {{endif readonly}} class="col-md-12" id="cmbTipo" name="cmbTipo">
+    <div class="separado">
+      <label class="separado-l">Nombre Completo</label>
+      <input class="separado-l" {{readonly}} type="text" name="txtName" id="txtName" value="{{username}}" placeholder="Nombre Completo" />
+    </div>
+    <div class="separado">
+      <label class="separado-l">Tipo de Usuario</label>
+        <span class="select separado-l"><select {{if readonly}}disabled readonly="readonly" {{endif readonly}} class="col-md-12" id="cmbTipo" name="cmbTipo">
           {{foreach tipoUsuarios}}
             <option value="{{codigo}}" {{selected}}>{{valor}}</option>
           {{endfor tipoUsuarios}}
       </select></span>
     </div>
-    <div class="row s-padding">
-      <label class="col-sm-5">Estado</label>
-      <span class="select col-sm-7"><select {{if readonly}}disabled readonly="readonly" {{endif readonly}} class="col-md-12" id="cmbEstado" name="cmbEstado">
+    <div class="separado">
+      <label class="separado-l">Estado</label>
+      <span class="select separado-l"><select {{if readonly}}disabled readonly="readonly" {{endif readonly}} class="col-md-12" id="cmbEstado" name="cmbEstado">
         {{foreach estadoUsuarios}}
           <option value="{{codigo}}" {{selected}}>{{valor}}</option>
         {{endfor estadoUsuarios}}
       </select> </span>
     </div>
     {{ifnot readonly}}
-    <div class="row s-padding">
-      <label class="col-sm-5">Contraseña</label>
-      <input class="col-sm-7" {{readonly}} type="password" name="txtPswd" id="txtPswd" value="" placeholder="Contraseña" />
+    <div class="separado">
+      <label class="separado-l">Contraseña</label>
+      <input class="separado-l" {{readonly}} type="password" name="txtPswd" id="txtPswd" value="" placeholder="Contraseña" />
 
     </div>
     {{endifnot readonly}}
-    <div class="row s-padding">
-      <div class="col-md-12 right">
+    <div class="separado">
+      <div class="">
         {{ifnot readonly}}
-        <button id="btnConfirm"><span class="icon "></span>Confirmar</button>
+        <button id="btnConfirm" class="pointer boton separado-l">Confirmar</button>
         {{endifnot readonly}}
-        <button id="btnCancel">Cancelar</button>
+        <button id="btnCancel" class="pointer boton separado-l">Cancelar</button>
       </div>
     </div>
     </div>
   </form>
 </div>
 {{ifnot isinsert}}
-<div class="row depth-1 m-padding">
+<div class="contenedor centrar-texto">
   <h2>Roles Por Usuario</h2>
-</div>
-<div class="row depth-1 m-padding">
-  <table class="col-sm-8 col-sm-offset-2 col-md-6 col-offset-3">
+
+<div class="contenedor-tabla">
+  <table class="listado-tabla">
     <thead>
 
       <tr>
           <th colspan="3">
             <form action="index.php?page=user" method="post"  id="frmAddRol">
             {{ifnot readonly}}
-              <span class="select col-sm-10">
-                <select name="rolescod" class="col-sm-12">
+              <span class="">
+                <select name="rolescod" class="selected">
                   {{foreach rolesavailable}}
                     <option value="{{rolescod}}">{{rolesdsc}}</option>
                   {{endfor rolesavailable}}
@@ -88,8 +103,8 @@
             {{endif readonly}}
             {{ifnot readonly}}
             <span class="col-sm-2 right">
-            <a href id="btnAddRol" class="btn depth-1 s-margin">
-              <span class="ion-plus-circled"></span>
+            <a href id="btnAddRol" class="">
+              <span class="ion-plus-circled agrandar-boton"></span>
             </a>
             </span>
             {{endifnot readonly}}
@@ -132,8 +147,14 @@
     </tbody>
   </table>
 </div>
+
+</div>
+
+
+
 {{endifnot isinsert}}
 <script>
+  
   $().ready(function(){
       $("#btnConfirm").click(function(e){
         e.preventDefault();

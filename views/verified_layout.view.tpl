@@ -7,11 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/css/normalize.css">
     <link rel="stylesheet" href="public/css/styles_2.css">
-
      <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-           
+    <script src="public/js/jquery.min.js"></script>       
     
-    <script src="public/js/upn.js"></script>
+   
     <title>{{page_title}}</title>
     <link rel="shortcut icon" href="public/imgs/logo_upnfm.png" type="image/x-icon">
 </head>

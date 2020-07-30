@@ -1,56 +1,70 @@
-<h1>Gestión de Rol</h1>
-<div class="row depth-1 m-padding">
-  <h2>{{modeDesc}}</h2>
-</div>
-<div class="row depth-1 m-padding">
-  {{if haserrores}}
-    <ul class="alert alert-danger depth-1 m-padding" style="list-style:none;">
-      {{foreach errores}}
-        <li>
-          {{this}}
-        </li>
-      {{endfor errores}}
-    </ul>
-  {{endif haserrores}}
-  <form action="index.php?page=rol" method="post" class="col-sm-8 col-sm-offset-2 col-md-6 col-offset-3">
-    <input type="hidden" name="mode" value="{{mode}}"  />
-    <input type="hidden" name="tocken" value="{{tocken}}"  />
-    <input type="hidden" name="rolescod" value="{{rolescod}}"  />
-    <div class="row">
-      <div class="row s-padding">
-        <label class="col-sm-5">Código del rol </label>
-        <input class="col-sm-7" {{readonly}} {{isupdate}} type="text" name="txtCodigo" id="txtCodigo" value="{{rolescod}}" placeholder="Codigo" />
-      </div>
-    <div class="row s-padding">
-      <label class="col-sm-5">Descripción</label>
-      <input class="col-sm-7" {{readonly}} type="text" name="txtName" id="txtName" value="{{rolesdsc}}" placeholder="Descripcion del Rol" />
-    </div>
-    <div class="row s-padding">
-      <label class="col-sm-5">Estado</label>
-      <span class="select col-sm-7"><select {{if readonly}}disabled readonly="readonly" {{endif readonly}} class="col-md-12" id="cmbEstado" name="cmbEstado">
-        {{foreach estadoRol}}
-          <option value="{{codigo}}" {{selected}}>{{valor}}</option>
-        {{endfor estadoRol}}
-      </select> </span>
-    </div>
+<section class="relleno">
+  <h1 class="fw-400 centrar-texto">Departamento de Técnica Industrial</h1>
 
-    <div class="row s-padding">
-      <div class="col-md-12 right">
-        {{ifnot readonly}}
-        <button id="btnConfirm"><span class="icon "></span>Confirmar</button>
-        {{endifnot readonly}}
-        <button id="btnCancel">Cancelar</button>
+  <div class="titulos-nosotros-padre seccion-especial">
+      <div class="titulo1">
+          <h2 class="fw-400 centrar-texto">ROLES</h2>
       </div>
-    </div>
-    </div>
-  </form>
-</div>
+
+      <div class="titulo2">
+          <h2 class="centrar-texto">{{modeDesc}}</h2>
+      </div>
+  </div>
+</section>
+
+
+
+  <div class="contenedor">
+    {{if haserrores}}
+      <ul >
+        {{foreach errores}}
+          <li class="showerrors">
+            {{this}}
+          </li>
+        {{endfor errores}}
+      </ul>
+    {{endif haserrores}}
+    <form action="index.php?page=rol" method="post" class="contenedor_log" style="margin-top:1rem;">
+      <input type="hidden" name="mode" value="{{mode}}"  />
+      <input type="hidden" name="tocken" value="{{tocken}}"  />
+      <input type="hidden" name="rolescod" value="{{rolescod}}"  />
+      <div class="row">
+        <div class="separado">
+          <label class="separado-l">Código del rol:</label>
+          <input class="separado-l" {{readonly}} {{isupdate}} type="text" name="txtCodigo" id="txtCodigo" value="{{rolescod}}" placeholder="Codigo" />
+        </div>
+      <div class="separado">
+        <label class="separado-l">Descripción:</label>
+        <input class="separado-l" {{readonly}} type="text" name="txtName" id="txtName" value="{{rolesdsc}}" placeholder="Descripcion del Rol" />
+      </div>
+      <div class="separado">
+        <label class="separado-l">Estado:</label>
+        <span class="select separado-l"><select {{if readonly}}disabled readonly="readonly" {{endif readonly}} class="col-md-12" id="cmbEstado" name="cmbEstado">
+          {{foreach estadoRol}}
+            <option value="{{codigo}}" {{selected}}>{{valor}}</option>
+          {{endfor estadoRol}}
+        </select> </span>
+      </div>
+
+      <div class="separado">
+        <div class="col-md-12 right">
+          {{ifnot readonly}}
+          <button id="btnConfirm "class="pointer boton separado-l"><span ></span>Confirmar</button>
+          {{endifnot readonly}}
+          <button id="btnCancel" class="pointer boton separado-l">Cancelar</button>
+        </div>
+      </div>
+      </div>
+    </form>
+  </div>
 {{ifnot isinsert}}
-<div class="row depth-1 m-padding">
+<div class="contenedor centrar-texto">
   <h2>Programas Por Rol</h2>
 </div>
-<div class="row depth-1 m-padding">
-  <table class="col-sm-8 col-sm-offset-2 col-md-6 col-offset-3">
+
+
+<div class="contenedor-tabla">
+  <table class="listado-tabla">
     <thead>
 
       <tr>
@@ -58,7 +72,7 @@
             <form action="index.php?page=rol" method="post"  id="frmAddPrg">
             {{ifnot readonly}}
               <span class="select col-sm-10">
-                <select name="programacod" class="col-sm-12">
+                <select name="programacod" class="selected">
                   {{foreach prgavailable}}
                     <option value="{{fncod}}">{{fndsc}}</option>
                   {{endfor prgavailable}}
@@ -75,7 +89,7 @@
             {{ifnot readonly}}
             <span class="col-sm-2 right">
             <a href id="btnAddPgm" class="btn depth-1 s-margin">
-              <span class="ion-plus-circled"></span>
+              <span class="ion-plus-circled agrandar-boton"></span>
             </a>
             </span>
             {{endifnot readonly}}

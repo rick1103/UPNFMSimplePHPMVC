@@ -35,7 +35,7 @@
     {{{page_content}}}
     
 
-     <script src="public/JavaScript/utilidades.js"></script>
+     
     <footer class="footer">
         <div class="contenedor-footer">
             <div class="final">
@@ -77,6 +77,10 @@
 
         <p class="centro">Todos los derechos reservados &copy;</p>
     </footer>
+
+    {{foreach js_ref}}
+                <script src="{{uri}}"></script>
+            {{endfor js_ref}}
 
 </body>
 </html>

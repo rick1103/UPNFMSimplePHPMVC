@@ -23,6 +23,8 @@ function run(){
     $data["roles"] = obtenerRolesPorFiltro($filter, '%');
 
     renderizar("security/roles", $data);
+    
 }
+addJsRef("public/js/app.js");
 run();
  ?>
