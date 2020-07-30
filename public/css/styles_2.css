@@ -116,6 +116,9 @@ h4{
 .centrar-texto{
     text-align: center;
 }
+.fw-400{
+    font-weight: 400;
+}
 
 
 /* Header */
@@ -694,7 +697,15 @@ footer{
     background-attachment: fixed;
     
 }
-.contenedor-extensiones h1{
+.contenedor-extensiones-admin{
+    background: url(../imgs/upnacreditada.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(51, 51, 51, 0.8);
+}
+.contenedor-extensiones h1, 
+.contenedor-extensiones-admin h1{
     margin: 0em;
     color: white;
 }
@@ -887,4 +898,193 @@ footer{
     display: flex;
     justify-content: center;
 
+}
+
+
+.relleno{
+    background: url(../imgs/panorama_upn.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.relleno::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.relleno h1{
+    margin: 0;
+    position: relative;
+}
+
+.relleno h2{
+    position: relative;
+}
+
+.relleno a{
+    position: relative;
+}
+.relleno h1{
+    margin: 2rem auto;
+}
+
+.titulo1{
+    text-align: center;
+    border: 0.1rem solid #ff9d00;
+    border-radius: .5rem;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 1rem;
+}
+
+.titulo2{
+    text-align: center;
+    border: 0.1rem solid #ff9d00;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 1rem;
+}
+
+.titulos-nosotros-padre{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (min-width:481px) {
+    .titulos-nosotros-padre{
+        flex-direction: row;
+    }
+
+    .titulo1{
+        flex-basis: calc(30% - 1rem);
+    }
+
+    .titulo2{
+        flex-basis: calc(70% - 1rem);
+    }
+}
+.titulo1 h2{
+    color: #ff9d00;
+}
+
+.titulo2 h3{
+    position: relative;
+    font-size: 2.5rem;
+    line-height: 2;
+}
+
+.seccion-especial{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.img-admin{
+    display: flex;
+    justify-content: center;
+}
+
+.opciones-admin{
+    display: flex;
+    flex-direction: column;
+}
+.opciones-admin a{
+    text-decoration: none;
+    color:whitesmoke;
+    margin: 0.5rem 0;
+    flex-basis: 100%;
+    padding:0.5rem 0;
+    border-radius: 0.5rem;
+    border: 0.2rem solid rgb(232, 150, 50);
+    background-color: #2C3E50;
+    box-shadow: 0.5rem 0.5rem 1rem #333;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.opciones-admin a:hover{
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+
+.contenedor-tabla{
+    
+    margin-bottom: 25rem;
+    caption-side: top;
+    
+}
+
+
+.listado-tabla {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+
+.listado-tabla thead {
+    background-color: rgba(57,60,155,.8);
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.listado-tabla thead th {
+    padding: 1rem 0;
+    
+}
+
+.listado-tabla tbody td
+{
+    padding: .5rem; 
+    text-align: center;
+    border-bottom: 0.1rem solid #393c9b;
+   
+}
+
+
+.listado-tabla tbody tr
+{
+    border-right: 0.1rem solid rgba(57,60,155,.3);
+    border-left: 0.1rem solid rgba(57,60,155,.3);
+}
+.listado-tabla tbody td a span{
+    font-size: 2.5rem;
+    padding: 0 1rem;
+}
+.th-a-icono{
+    padding: 0 !important;
+}
+
+
+.listado-tabla button {
+    background-color: transparent;
+    border: none;
+}
+.buscador {
+    width: 100%;
+    height: 4rem;
+    padding: 3rem;
+    border: 0.2rem solid rgba(232, 150, 50, .8);
+    margin: 2rem 0;
+    font-size: 2rem;
+    outline-color: rgba(232, 150, 50, .8);
+}
+.buscador::placeholder{
+    font-size: 2rem;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
 }

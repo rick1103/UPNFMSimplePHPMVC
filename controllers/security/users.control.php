@@ -24,7 +24,10 @@ function run(){
     $data["fltEmail"] = $filter;
     $data["usuarios"] = obtenerUsuarioPorFiltro($filter,'%');
     renderizar("security/users", $data );
+    
 }
+
+addJsRef("public/js/app.js");
 
 run();
 
