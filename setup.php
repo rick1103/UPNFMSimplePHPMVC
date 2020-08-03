@@ -17,7 +17,7 @@
     $pswdSalted = md5($pswdSalted);
 
     $result = insertUsuario('Administrador',
-                  'admin@demo.com',
+                  'admin@demo2.com',
                   $fchingreso, $pswdSalted, 'ADM');
 
     echo "Administrador creado: correo: admin@demo.com, contraseña: CorpDemo%33";

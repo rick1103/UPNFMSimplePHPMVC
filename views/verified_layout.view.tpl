@@ -13,6 +13,9 @@
    
     <title>{{page_title}}</title>
     <link rel="shortcut icon" href="public/imgs/logo_upnfm.png" type="image/x-icon">
+    {{foreach css_ref}}
+                <link rel="stylesheet" href="{{uri}}" />
+            {{endfor css_ref}}
 </head>
 <body>
     <header class="header-dividido">

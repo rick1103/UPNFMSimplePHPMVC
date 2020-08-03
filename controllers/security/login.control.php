@@ -94,7 +94,7 @@ function validarLogin($loginEmail, $loginPswd)
 
     $usuario = obtenerUsuarioPorEmail($loginEmail);
     $errors = array();
-    if (count($usuario)>0) {
+    if (is_array( $usuario ) && count($usuario)>0) {
         //verificacion de contraseña
         $salt = $usuario["userfching"];
         if ($salt % 2 == 0) {

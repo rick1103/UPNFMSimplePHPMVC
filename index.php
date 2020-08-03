@@ -81,6 +81,12 @@ case "extensiones":
 case "investigaciones":
   include_once "controllers/investigaciones.control.php";
   die();
+case "eventos":
+  include_once "controllers/eventos.control.php";
+  die();
+case "registro":
+  include_once "controllers/registro.control.php";
+  die();
   }
 
 //Este switch se encarga de todo el enrutamiento que ocupa login
