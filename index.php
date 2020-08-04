@@ -87,7 +87,14 @@ case "eventos":
 case "registro":
   include_once "controllers/registro.control.php";
   die();
+case "calendario":
+  include_once "controllers/calendario.control.php";
+  die();
+case "invitados":
+  include_once "controllers/invitados.control.php";
+  die();
   }
+
 
 //Este switch se encarga de todo el enrutamiento que ocupa login
 $logged = mw_estaLogueado();

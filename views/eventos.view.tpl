@@ -1,24 +1,4 @@
 
-<div class="barra">
-  <div class="contenedor clearfix">
-    <div class="logo">
-      <img src="public/imgs/logo.svg" alt="Logo" srcset="">
-    </div>
-
-    <div class="menu-movil">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <nav class="navegacion-principal clearfix">
-      <a href="#" class="">conferencia</a>
-      <a href="#" class="">calendario</a>
-      <a href="#" class="">invitado</a>
-      <a href="index.php?page=registro">reservaciones</a>
-    </nav>
-  </div><!-- contenedor-->
-</div><!-- Barra-->
 
 <section class="seccion contenedor">
   <h2>La mejor conferencia de diseño web en español</h2>

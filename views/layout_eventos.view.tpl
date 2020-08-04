@@ -41,6 +41,26 @@
     </div>
   </div>
 </header>
+<div class="barra">
+    <div class="contenedor clearfix">
+      <div class="logo">
+        <img src="public/imgs/logo.svg" alt="Logo" srcset="">
+      </div>
+  
+      <div class="menu-movil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <nav class="navegacion-principal clearfix">
+        <a href="#" class="">conferencia</a>
+        <a href="index.php?page=calendario" class="">calendario</a>
+        <a href="index.php?page=invitados" class="">invitados</a>
+        <a href="index.php?page=registro">reservaciones</a>
+      </nav>
+    </div><!-- contenedor-->
+  </div><!-- Barra-->
 
     {{{page_content}}}
 
