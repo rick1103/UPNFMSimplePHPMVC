@@ -188,6 +188,10 @@ h4{
     }
 }
 
+nav.navegacion{
+    display: none;
+}
+
 .navegacion a{
     text-decoration: none;
     color: #fff;
@@ -197,6 +201,10 @@ h4{
 }
 
 @media (min-width:481px) {
+    nav.navegacion{
+        display: flex;
+    }
+
     .navegacion a{
         color: #000;
         font-size: 1.8rem;
@@ -227,6 +235,25 @@ h4{
     align-items: center;
 }
 
+/* --- Menu movil ---*/
+div.menu-movil{
+    width: 6rem;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: 1.2rem;
+}
+
+div.menu-movil:hover{
+    cursor: pointer;
+}
+
+div.menu-movil span{
+    height: 0.8rem;
+    margin-top: 0.6rem;
+    background-color: #e89632;
+    display: block;
+}
 
 
 @media (min-width:481px) {
@@ -238,6 +265,10 @@ h4{
     .titulos-hijo{
         flex-basis: calc(50% - 2rem);
         text-align: center;
+    }
+
+    div.menu-movil span{
+        display: none;
     }
 }
 /*---------------------------------------------------------------

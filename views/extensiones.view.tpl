@@ -1,5 +1,18 @@
 
-    
+    <section class="relleno">
+        <h1 class="fw-400 centrar-texto">Departamento de Técnica Industrial</h1>
+
+        <div class="titulos-nosotros-padre seccion-especial">
+            <div class="titulo1">
+                <h2 class="fw-400 centrar-texto">Investigaciones</h2>
+            </div>
+
+            <div class="titulo2">
+                <h3 class="centrar-texto">Infórmate con nuestro área de investigaciones realizadas estratégicamente con investigación e innovación.</h3>
+            </div>
+        </div>
+    </section>
+
     <main class="contenedor-extensiones">
         <h1 class="centrar-texto extension1">Ateneo de Robótica Educativa UPNFM/ETI</h1>
         <div class="contenedor extensiones">

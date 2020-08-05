@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="public/css/normalize.css">
     <link rel="stylesheet" href="public/css/styles.css">
     <link rel="shortcut icon" href="public/IMGs/logo_upnfm.png" type="image/x-icon">
+    <script src="public/js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,6 +17,12 @@
         <div class="contenedor contenedor-header-padre">
             <div class="contenedor-header-hijo">
                 <a href="/"><img src="public/IMGs/encabprinc2.png" alt="Logo principal"></a>
+            </div>
+
+            <div class="menu-movil">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
             <div class="contenedor-header-hijo-medio">
@@ -41,12 +48,15 @@
             </div>        
         </div>
     </header>
+
+    <script>
+        $('.menu-movil').on('click', function() {
+            $('.navegacion').slideToggle();
+        });
+    </script>
+
     {{{page_content}}}
 
-    
-
-    
-    
     <footer class="footer">
         <div class="contenedor-footer">
             <div class="final">

@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/css/normalize.css">
     <link rel="stylesheet" href="public/css/styles_2.css">
+    <script src="public/js/jquery.min.js"></script>
     <title>{{page_title}}</title>
     <link rel="shortcut icon" href="public/imgs/logo_upnfm.png" type="image/x-icon">
     {{foreach css_ref}}
@@ -22,8 +23,10 @@
                 </a>
                 
             </div>
+
             <div class="lado lado-contenido2">
-                <nav>
+
+                <nav class="navegacion">
                         <a href="index.php?page=nosotros">Nosotros</a>
                         <a href="index.php?page=carreras">Carrera</a>
                         <a href="index.php?page=docentes">Docentes</a>
@@ -35,6 +38,11 @@
             </div>
     </header>
     
+    <script>
+        $('.menu-movil').on('click', function() {
+            $('.navegacion').slideToggle();
+        });
+    </script>
 
     {{{page_content}}}
    
