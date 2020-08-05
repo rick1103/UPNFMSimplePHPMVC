@@ -1,7 +1,7 @@
 
 <section class="seccion contenedor">
     <h2>registro de usuarios</h2>
-    <form action="index.php" id="registro" class="registro" method="post">
+    <form action="index.php?page=verificar" id="registro" class="registro" method="post">
         <div id="datos_usuario" class="registro caja clearfix">
             <div class="campo">
                 <label for="nombre">Nombre:</label>
@@ -31,7 +31,7 @@
                       <li>Todos los talleres</li>
                       <div class="orden">
                           <label for="pase_dia">Boletos deseados:</label>
-                          <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+                          <input type="number" min="0" id="pase_dia" size="3" placeholder="0" name="boletos[]">
                       </div>
                     </ul>
                   </div>
@@ -46,7 +46,7 @@
                       <li>Todos los talleres</li>
                       <div class="orden">
                         <label for="pase_completo">Boletos deseados:</label>
-                        <input type="number" min="0" id="pase_completo" size="3" placeholder="0">
+                        <input type="number" min="0" id="pase_completo" size="3" placeholder="0" name="boletos[]">
                     </div>
                     </ul>
                   </div>
@@ -61,7 +61,7 @@
                       <li>Todos los talleres</li>
                       <div class="orden">
                         <label for="pase_dosdias">Boletos deseados:</label>
-                        <input type="number" min="0" id="pase_dosdias" size="3" placeholder="0">
+                        <input type="number" min="0" id="pase_dosdias" size="3" placeholder="0" name="boletos[]">
                     </div>
                     </ul>
                   </div>
@@ -145,19 +145,19 @@
                 <div class="extras">
                     <div class="orden">
                         <label for="camisa_evento">camisa del evento $10<small>(Promocion 7% de Dto.)</small></label>
-                        <input type="number" name="" min="0" id="camisa_evento" size="3" placeholder="0">
+                        <input type="number" name="pedido_camisas" min="0" id="camisa_evento" size="3" placeholder="0">
                     </div><!--ORDEN-->
                     <div class="orden">
                         <label for="etiquetas">Paquete de 10 etiquetas $2<small>(Promocion 7% de Dto.)</small></label>
-                        <input type="number" name="" min="0" id="etiquetas" size="3" placeholder="0">
+                        <input type="number" name="pedido_etiquetas" min="0" id="etiquetas" size="3" placeholder="0">
                     </div><!--ORDEN-->
                     <div class="orden">
-                        <label for="regalo">camisa del evento $10<small>(Promocion 7% de Dto.)</small></label><br>
-                        <select name="" id="regalo" required>
+                        <label for="regalo">Regalo<small>(Promocion 7% de Dto.)</small></label><br>
+                        <select name="regalo" id="regalo" required>
                             <option value="">-- Seleccione un regalo</option>
-                            <option value="ETI">Etiquetas</option>
-                            <option value="PUL">Pulsera</option>
-                            <option value="PLU">Plumas</option>
+                            <option value="2">Etiquetas</option>
+                            <option value="1">Pulsera</option>
+                            <option value="3">Plumas</option>
                         </select>
                     </div><!--ORDEN-->
                     <input type="button" value="Calcular" id="calcular" class="button">
@@ -169,8 +169,10 @@
                     </div>
                     <p>Total</p>
                     <div id="sumaTotal">
-                        <input type="submit" value="Pagar" id="btnRegistro" class="button">
-                    </div>
+                    </div>  
+                        <input type="hidden" name="total_pedido" id="totalPedido" value="total_pedido">
+                        <input type="submit" value="Pagar" id="btnRegistro" class="button" name="submit" >
+                    
                 </div>
             </div><!--cAJA CLEAR FIX-->
         </div><!--RESUMEN CLEARFIX-->

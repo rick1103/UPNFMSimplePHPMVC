@@ -25,6 +25,8 @@
         var etiquetas = document.getElementById('etiquetas');
 
 
+        botonRegistro.disabled = true;
+
 
         calcular.addEventListener('click', calcularMontos);
         pase_dia.addEventListener('blur', mostrarDias);
@@ -86,7 +88,10 @@
                 
                     listaProductos.innerHTML += listadoProductos[i] + '<br/>'; 
                 } 
-                suma.innerHTML="$ "+totalPagar.toFixed(2);  
+                suma.innerHTML ="$ "+totalPagar.toFixed(2);  
+                botonRegistro.disabled= false;
+                document.getElementById('totalPedido').value = totalPagar;
+                document.getElementById('btnRegistro').value ='click';
             }
         } 
         function mostrarDias() {
