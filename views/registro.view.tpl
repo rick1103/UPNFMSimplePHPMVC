@@ -1,6 +1,15 @@
 
 <section class="seccion contenedor">
     <h2>registro de usuarios</h2>
+
+
+    {{foreach nombre_evento}}
+        {{foreach this}}
+        <h2>{{nombre_evento}}</h2>
+        <h2>{{hora_evento}}</h2>
+        {{endfor nombre_evento}}
+
+    {{endfor viSeminario}}
     <form action="index.php?page=verificar" id="registro" class="registro" method="post">
         <div id="datos_usuario" class="registro caja clearfix">
             <div class="campo">
@@ -38,7 +47,7 @@
                 </li><!--Fin de li loco-->
                 <li>
                   <div class="tabla-precio">
-                    <h3>pase por 2 dias</h3>
+                    <h3>pase completo</h3>
                     <p class="numero">$45</p>
                     <ul>
                       <li>Bocadillo Gratis</li>
@@ -53,7 +62,7 @@
                 </li><!--Fin de li loco-->
                 <li>
                   <div class="tabla-precio">
-                    <h3>pase por dia</h3>
+                    <h3>pase por 2 dias</h3>
                     <p class="numero">$30</p>
                     <ul>
                       <li>Bocadillo Gratis</li>

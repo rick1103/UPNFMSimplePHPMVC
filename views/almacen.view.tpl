@@ -1,30 +1,36 @@
 <h1>{{modedsc}}</h1>
 <section>
-  <form action="index.php?page=almacen&mode={{mode}}&almcod={{almcod}}" method="POST">
+  <form action="index.php?page=m_invitado&mode={{mode}}&inv_id={{invitado_id}}" method="POST">
       <div>
-        <label for="almcod">Código</label>
-        <input type="number" name="almcod" id="almcod" value="{{almcod}}" />
+        <label for="invitado_id">Código</label>
+        <input type="number" name="invitado_id" id="invitado_id" value="{{invitado_id}}" />
       </div>
       <div>
-        <label for="almdsc">Almacén</label>
-        <input type="text" name="almdsc" id="almdsc" value="{{almdsc}}" />
+        <label for="nombre_invitado">Nombre</label>
+        <input type="text" name="nombre_invitado" id="nombre_invitado" value="{{nombre_invitado}}" />
       </div>
+
+
       <div>
-        <label for="almtip">Tipo</label>
-        <select id="almtip" name="almtip">
-          <option value="WRH" {{almtip_WRH}}>Almacén</option>
-          <option value="RTL" {{almtip_RTL}}>Punto de Venta</option>
-          <option value="TRS" {{almtip_TRS}}>Almacén de Distribución</option>
-        </select>
+        <label for="apellido_invitado">Apellido</label>
+        <input type="text" name="apellido_invitado" id="apellido_invitado" value="{{apellido_invitado}}" />
       </div>
+
+
       <div>
-        <label for="almest">Estado</label>
-        <select id="almest" name="almest">
-          <option value="PLN" {{almest_PLN}}>En Construcción</option>
-          <option value="ACT" {{almest_ACT}}>Activo</option>
-          <option value="INA" {{almest_INA}}>Inactivo</option>
-        </select>
+        <label for="descripcion">Descrpcion</label>
+        <input type="text" name="descripcion" id="descripcion" value="{{descripcion}}" />
       </div>
+      
+      
+      
+      <div>
+        <label for="url_imagen">URL- Imagen</label>
+        <input type="text" name="url_imagen" id="url_imagen" value="{{url_imagen}}" />
+      </div>
+      
+      
+      
       <div>
         <button type="submit" name="btnGuardar">Guardar</button>
         &nbsp;

@@ -29,7 +29,8 @@ function buscarContactos(e){
               
               console.log(registro.childNodes);
               if(registro.childNodes[0].textContent.replace(/\s/g, " ").search(expresion) != -1 || 
-              registro.childNodes[1].textContent.replace(/\s/g, " ").search(expresion) != -1 ){
+              registro.childNodes[1].textContent.replace(/\s/g, " ").search(expresion) != -1 ||
+              registro.childNodes[2].textContent.replace(/\s/g, " ").search(expresion) != -1 ){
                 registro.style.display = 'table-row';
               }
              // numeroContactos();

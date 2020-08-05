@@ -178,6 +178,37 @@ case "almacen2":
     include_once "controllers/almacen2.control.php" :
     mw_redirectToLogin($_SERVER["QUERY_STRING"]);
     die();
+case "m_invitados":
+  ($logged) ?
+  include_once "controllers/m_invitados.control.php" :
+  mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+  die();
+case "m_invitado":
+  ($logged) ?
+  include_once "controllers/m_invitado.control.php" :
+  mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+  die();
+case "m_eventos":
+  ($logged) ?
+  include_once "controllers/m_eventos.control.php" :
+  mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+  die();
+case "m_evento":
+  ($logged) ?
+  include_once "controllers/m_evento.control.php" :
+  mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+  die();
+case "m_registrados":
+  ($logged) ?
+  include_once "controllers/m_registrados.control.php" :
+  mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+  die();
+case "m_registrado":
+  ($logged) ?
+  include_once "controllers/m_registrado.control.php" :
+  mw_redirectToLogin($_SERVER["QUERY_STRING"]);
+  die();
+  
 
 }
 
