@@ -93,6 +93,9 @@ case "calendario":
 case "invitados":
   include_once "controllers/invitados.control.php";
   die();
+case "verificar":
+  include_once "controllers/verificar.control.php";
+  die();
   }
 
 

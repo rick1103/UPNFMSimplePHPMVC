@@ -54,7 +54,7 @@
       </div>
   
       <nav class="navegacion-principal clearfix">
-        <a href="#" class="">conferencia</a>
+        <a href="index.php?page=eventos" class="">conferencia</a>
         <a href="index.php?page=calendario" class="">calendario</a>
         <a href="index.php?page=invitados" class="">invitados</a>
         <a href="index.php?page=registro">reservaciones</a>

@@ -38,3 +38,5 @@ jQuery(document).ready(function() {
       return false;
   });
 });
+
+jQuery('.invitado-info').colorbox({inline:true, width:"50%"}); 

@@ -2,22 +2,17 @@
 
 require_once 'models/eventos.model.php';
 function run(){
-    $calendario = array();
-    $calendario["eventos"] = " ";
-    $calendario["eventos"] = obtenerEventos_calendario();
-    
-    foreach($calendario["eventos"] as $cal){
-        $fecha = $cal["fecha_evento"];
-        $fechas[$fecha][]=$cal;
-    }
-    $calendario['fechas']=array_keys( $fechas ); 
+    $info = array();
 
-    
-   
-    //     $calendario["eventos"]=$fechas;
+    $info["invitados"] = obtenerInvitados();
 
-    renderizar("invitados",$calendario,"layout_eventos.view.tpl");
+    renderizar("invitados",$info,"layout_eventos.view.tpl");
   }
+
+//   addCssRef("public/css/colorbox.css");
+  addJsRef("public/js/jquery.js");
+  addJsRef("public/js/jquery.colorbox-min.js");
+  addJsRef("public/js/plugins.js");
 
   run();
 ?>

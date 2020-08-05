@@ -23,110 +23,82 @@
       <div class="programa-evento">
         <h2>Eventos UPNFM </h2>
         <nav class="menu-programa">
-          <a href="#talleres"><i class="fas fa-code"></i>talleres</a>
-          <a href="#conferencias"><i class="fas fa-comment"></i>conferencias</a>
-          <a href="#seminarios"><i class="fas fa-university"></i> seminarios</a>
+        {{foreach categoria_evento}}
+          <a href="#{{cat_evento}}"><i class="fas {{icono}}"></i>{{cat_evento}}</a>
+          {{endfor categoria_evento}}
         </nav>
-        <div id="talleres" class="info-curso ocultar clearfix">
+        
+
+
+
+        <div id="Seminario" class="info-curso ocultar clearfix">
+        {{foreach resumen_seminario}}
           <div class="detalle-evento">
-            <h3>html5, css3, javascript</h3>
-            <p><i class="fas fa-clock"></i>16:00 hrs</p>
-            <p><i class="fas fa-calendar"></i>10 de agosto</p>
-            <p><i class="fas fa-user"></i>rolando zavala</p>
+            <h3>{{nombre_evento}}</h3>
+            <p><i class="fas fa-clock"></i>{{hora_evento}} hrs</p>
+            <p><i class="fas fa-calendar"></i>{{fecha_evento}}</p>
+            <p><i class="fas fa-user"></i>{{nombre_invitado}} {{apellido_invitado}}</p>
           </div><!--detalle del evento-->
+        {{endfor resumen_seminario}}
+        </div><!--info-curso ocultar clearfix-->
+
+        <div id="Talleres" class="info-curso ocultar clearfix">
+          {{foreach resumen_taller}}
           <div class="detalle-evento">
-            <h3>responsive web design</h3>
-            <p><i class="fas fa-clock"></i>18:00 hrs</p>
-            <p><i class="fas fa-calendar"></i>10 de agosto</p>
-            <p><i class="fas fa-user"></i>rolando zavala</p>
-            <a href="#" class="button float-right">Ver todos</a>
+            <h3>{{nombre_evento}}</h3>
+            <p><i class="fas fa-clock"></i>{{hora_evento}} hrs</p>
+            <p><i class="fas fa-calendar"></i>{{fecha_evento}}</p>
+            <p><i class="fas fa-user"></i>{{nombre_invitado}} {{apellido_invitado}}</p>
           </div><!--detalle del evento-->
+        {{endfor resumen_taller}}
         </div><!--info-curso ocultar clearfix-->
 
 
 
-        <div id="seminarios" class="info-curso ocultar clearfix">
+        <div id="Conferencias" class="info-curso ocultar clearfix">
+          {{foreach resumen_conferencias}}
           <div class="detalle-evento">
-            <h3>Esto es un seminario</h3>
-            <p><i class="fas fa-clock"></i>16:00 hrs</p>
-            <p><i class="fas fa-calendar"></i>10 de agosto</p>
-            <p><i class="fas fa-user"></i>rolando zavala</p>
+            <h3>{{nombre_evento}}</h3>
+            <p><i class="fas fa-clock"></i>{{hora_evento}} hrs</p>
+            <p><i class="fas fa-calendar"></i>{{fecha_evento}}</p>
+            <p><i class="fas fa-user"></i>{{nombre_invitado}} {{apellido_invitado}}</p>
           </div><!--detalle del evento-->
-          <div class="detalle-evento">
-            <h3>responsive web design</h3>
-            <p><i class="fas fa-clock"></i>18:00 hrs</p>
-            <p><i class="fas fa-calendar"></i>10 de agosto</p>
-            <p><i class="fas fa-user"></i>rolando zavala</p>
-            <a href="#" class="button float-right">Ver todos</a>
-          </div><!--detalle del evento-->
+        {{endfor resumen_conferencias}}
         </div><!--info-curso ocultar clearfix-->
 
 
-
-        <div id="conferencias" class="info-curso ocultar clearfix">
-          <div class="detalle-evento">
-            <h3>esto es una conferencia</h3>
-            <p><i class="fas fa-clock"></i>16:00 hrs</p>
-            <p><i class="fas fa-calendar"></i>10 de agosto</p>
-            <p><i class="fas fa-user"></i>rolando zavala</p>
-          </div><!--detalle del evento-->
-          <div class="detalle-evento">
-            <h3>responsive web design</h3>
-            <p><i class="fas fa-clock"></i>18:00 hrs</p>
-            <p><i class="fas fa-calendar"></i>10 de agosto</p>
-            <p><i class="fas fa-user"></i>rolando zavala</p>
-            <a href="#" class="button float-right">Ver todos</a>
-          </div><!--detalle del evento-->
-        </div><!--info-curso ocultar clearfix-->
       </div><!--pograma-evento-->
     </div><!--contenedor-->
   </div><!--contenido-programa-->
 </section><!--Programa-->
 
+
 <section class="invitados contenedor seccion">
   <h2>nuestros invitados</h2>
   <ul class="lista-invitados clearfix">
+    {{foreach invitados}}
+    <li>
+      <div class="invitado">
+        <a class="invitado-info" href="#invitado{{invitado_id}}">
+        <img src="public/imgs/{{url_imagen}}" alt="" srcset="">
+        <p>{{nombre_invitado}} {{apellido_invitado}}</p>
+      </a>
+      </div><!--Invitado-->
+    </li>
+    <div style="display: none;">
+      <div class="invitado-info" id="invitado{{invitado_id}}">
+        <h2>{{nombre_invitado}} {{apellido_invitado}}</h2>
+        <img src="public/imgs/{{url_imagen}}" alt="">
+        <p>{{descripcion}}</p>
 
-    <li>
-      <div class="invitado">
-        <img src="public/imgs/invitado1.jpg" alt="" srcset="">
-        <p>rafael bautista</p>
-      </div><!--Invitado-->
-    </li>
-    <li>
-      <div class="invitado">
-        <img src="public/imgs/invitado2.jpg" alt="" srcset="">
-        <p>rafael bautista</p>
-      </div><!--Invitado-->
-    </li>
-    <li>
-      <div class="invitado">
-        <img src="public/imgs/invitado3.jpg" alt="" srcset="">
-        <p>rafael bautista</p>
-      </div><!--Invitado-->
-    </li>
-    <li>
-      <div class="invitado">
-        <img src="public/imgs/invitado4.jpg" alt="" srcset="">
-        <p>rafael bautista</p>
-      </div><!--Invitado-->
-    </li>
-    <li>
-      <div class="invitado">
-        <img src="public/imgs/invitado5.jpg" alt="" srcset="">
-        <p>rafael bautista</p>
-      </div><!--Invitado-->
-    </li>
-    <li>
-      <div class="invitado">
-        <img src="public/imgs/invitado6.jpg" alt="" srcset="">
-        <p>rafael bautista</p>
-      </div><!--Invitado-->
-    </li>
+      </div>   
 
-  </ul><!---->
+    </div>
+
+    {{endfor invitados}}
+   
+    </ul><!---->
 </section><!--Invitados contenedor seccion-->
-
 
 <div class="contador parallax">
   <div class="contenedor">
