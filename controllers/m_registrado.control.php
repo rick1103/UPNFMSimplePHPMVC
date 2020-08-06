@@ -9,7 +9,7 @@ function run()
     // Determinar si vamos actualiza, borrar o solo ver
     $info["modedsc"] = "";
     // Que nos agregue el nombre del almacen
-    $info["id_registrado"] = "";
+    $info["ID_Registrado"] = "";
     // Variables de bases de datos
     $info["invitados"]=obtenerInvitados();
     $info["categoria"]=obtenerCategoriaEventos();
@@ -29,8 +29,8 @@ function run()
         $info["mode"] = $_GET["mode"];
     }
     
-    if (isset($_GET["id_registrado"])) {
-        $info["id_registrado"] = intval($_GET["id_registrado"]);
+    if (isset($_GET["ID_Registrado"])) {
+        $info["ID_Registrado"] = intval($_GET["ID_Registrado"]);
     }
 
     if (isset($_POST["btnCancelar"])) {
@@ -40,7 +40,7 @@ function run()
 
 
     if (isset($_POST["btnGuardar"])) {
-        $info["id_registrado"] = $_POST["id_registrado"];
+        $info["ID_Registrado"] = $_POST["ID_Registrado"];
         $info["nombre_evento"] = $_POST["nombre_evento"];
         $info["fecha_evento"] = $_POST["fecha_evento"];
         $info["hora_evento"] = $_POST["hora_evento"];
@@ -64,9 +64,7 @@ function run()
                 (int)$info["id_inv"],
                 $info["clave"]
             );
-            // echo "<pre>";
-            // var_dump($info);
-            // echo "</pre>";
+            
             redirectWithMessage("Almacén Agregado Satisfactoriamente", "index.php?page=m_registrados");
             break;
         case "UPD":
@@ -78,36 +76,40 @@ function run()
                 $info["pases_articulos"],
                 $info["talleres_registrado"],
                 $info["tatal_pagado"],
-                $info["id_registrado"]
+                $info["ID_Registrado"]
             );
             redirectWithMessage("Almacén Actualizado Satisfactoriamente", "index.php?page=m_registrados");
             break;
         case "DEL":
             eliminarAlmacen(
-                $info["id_registrado"]
+                $info["ID_Registrado"]
             );
             redirectWithMessage("Almacén Eliminado Satisfactoriamente", "index.php?page=m_registrados");
             break;
         }
     }
-    echo "<pre>";
-    print_r($info);
-    echo "</pre>";
+    
     if (isset($modeDsc[$info["mode"]])) {
         if ($info["mode"] != 'INS') {
-            $almtmp = obtenerRegistradoXId((int)$info["id_registrado"]);
+            $almtmp = obtenerRegistradoXId((int)$info["ID_Registrado"]);
+
             $info["nombre_registrado"] = $almtmp["nombre_registrado"];
             $info["apellido_registrado"] = $almtmp["apellido_registrado"];
             $info["email_registrado"] = $almtmp["email_registrado"];
             $info["fecha_registro"] = $almtmp["fecha_registro"];
-            $info["pases_articulos"] = $almtmp["pases_articulos"];
-            $info["talleres_registrado"] = $almtmp["talleres_registrado"];
-            $info["tatal_pagado"] = $almtmp["tatal_pagado"];
+            $info["pases_articulos"] = json_decode($almtmp["pases_articulos"],true);
+            $info["talleres_registrados"] = json_decode($almtmp["talleres_registrados"],true);
+            $info["total_pagado"] = $almtmp["total_pagado"];
+            $info['un_dia']=$info["pases_articulos"]['un_dia'];
+            $info['pase_completo']=$info["pases_articulos"]['pase_completo'];
+            $info['pase_2dias']=$info["pases_articulos"]['pase_2dias'];
+            $info['camisas']=$info["pases_articulos"]['camisas'];
+            $info['etiquetas']=$info["pases_articulos"]['etiquetas'];
 
 
             // $info["modedsc"] = sprintf(
             //     $modeDsc[$info["mode"]],
-            //     $info["id_registrado"],
+            //     $info["ID_Registrado"],
             //     $info["almdsc"]
             // );
         }
@@ -115,7 +117,11 @@ function run()
         redirectWithMessage("Error algo pasó", "index.php?page=m_registrados");
     }
 
-    renderizar("m_evento",$info);
+    // echo "<pre>";
+    // print_r($info);
+    // echo "</pre>";
+
+    renderizar("m_registrado",$info);
 }
 // Correr el controlador
 run();

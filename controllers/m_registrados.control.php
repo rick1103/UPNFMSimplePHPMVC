@@ -6,6 +6,9 @@ function run(){
 
 
     $info["registrados"] = obtenerRegistrados();
+    // echo "<pre>";
+    // echo var_dump($info);
+    // echo "</pre>";
 
     renderizar("m_registrados",$info);
   }

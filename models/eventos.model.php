@@ -193,7 +193,7 @@ function obtenerEventoXId ($almcod)
 
 function obtenerRegistradoXId ($almcod)
 {
-    $sqlstr = "SELECT * from registrados where id_registrado=%d;";
+    $sqlstr = "SELECT * from registrados where ID_Registrado=%d;";
     return obtenerUnRegistro(
         sprintf(
             $sqlstr,

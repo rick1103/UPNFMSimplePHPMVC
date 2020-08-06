@@ -32,8 +32,11 @@ function eventos_json($eventos){
   return json_encode($eventos_json); 
 }
 function run(){ 
+
   $info=array();
   if(isset($_POST['submit'])){
+
+
     $info['exitoso']= false;
     $info['error']= false;
     $info['nombre']= $_POST['nombre'];
@@ -67,5 +70,7 @@ function run(){
   renderizar("verificar", $info,"layout_eventos.view.tpl");
 }
   addJsRef('public/js/main.js');
+
+
   run();
 ?>

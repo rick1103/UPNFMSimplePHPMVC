@@ -27,7 +27,7 @@
           <th>Correo Electronico</th>
           <th>Regalo</th>
           <th>Pagado</th>
-          <th><a href="index.php?page=m_registrado&id_registrado&mode=INS" style="color: white;">
+          <th><a href="index.php?page=m_registrado&ID_Registrado&mode=INS" style="color: white;">
             <span class="ion-plus-circled"></span>
             </a></th>
         </tr>
@@ -36,13 +36,12 @@
         {{foreach registrados}}
         <tr>
         
-          <td>{{nombre_registrado}}  {{apellido_registrado}}</td>
+          <td>{{nombre_registrado}}   {{apellido_registrado}}</td>
           <td>{{email_registrado}}</td>
           <td>{{nombre_regalo}}</td>
           <td>{{total_pagado}}</td>
           <td class="th-a-icono">
-            <a href="index.php?page=m_registrado&id_registrado={{id_registrado}}&mode=UPD" class="btn depth-1 s-margin"><span class="ion-edit"></span></a>
-            <a href="index.php?page=m_registrado&id_registrado={{id_registrado}}&mode=DSP" class="btn depth-1 s-margin"><span class="ion-eye"></span></a>
+            <a href="index.php?page=m_registrado&ID_Registrado={{ID_Registrado}}&mode=DSP" class="btn depth-1 s-margin"><span class="ion-eye"></span></a>
           </td>
         </tr>
         {{endfor registrados}}
