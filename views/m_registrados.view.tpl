@@ -16,7 +16,7 @@
 
 <div class="contenedor">
   
-        <input type="text" name="fltEmail"  class="buscador sombra" id="fltEmail" placeholder="Buscar Evento" value="{{fltDsc}}" />
+        <input type="text" name="fltEmail"  class="buscador sombra" id="fltEmail" placeholder="Buscar Usuario Registrado" value="{{fltDsc}}" />
         
 
   <div class="contenedor-tabla">

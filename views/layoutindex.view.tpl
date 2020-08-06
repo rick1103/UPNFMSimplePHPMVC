@@ -34,6 +34,8 @@
                     <a href="index.php?page=extensiones">Extensiones</a>
                     <a href="index.php?page=contacto">Contacto</a>
                     <a href="index.php?page=login">Id</a>
+                    <a href="index.php?page=eventos">Eventos</a>
+
                 </nav>
             </div>
 
