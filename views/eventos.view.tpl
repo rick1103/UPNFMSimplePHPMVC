@@ -158,57 +158,12 @@
   </div>
 </section>
 
-<div id="mapa" class="mapa">
-</div>
-
-<section class="seccion">
-  <h2>testimoniales</h2>
-  <div class="testimoniales contenedor clearfix">
-    <div class="testimonial">
-      <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia adipisci eius deleniti praesentium modi repudiandae, maxime fugit, voluptatibus minus aliquid ab itaque veniam odio? Dolorem obcaecati expedita odit voluptates itaque.</p>
-        <footer class="info-testimonial clearfix">
-          <img src="public/imgs/testimonial.jpg" alt="imagen testimonial" srcset="">
-          <cite>Rolando Zavala, el macizo <span>Ingeniero en sistemas</span></cite>
-        </footer>
-      </blockquote>
-    </div><!--Fin de testimonial-->
-    <div class="testimonial">
-      <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia adipisci eius deleniti praesentium modi repudiandae, maxime fugit, voluptatibus minus aliquid ab itaque veniam odio? Dolorem obcaecati expedita odit voluptates itaque.</p>
-        <footer class="info-testimonial clearfix">
-          <img src="public/imgs/testimonial.jpg" alt="imagen testimonial" srcset="">
-          <cite>Rolando Zavala, el macizo <span>Ingeniero en sistemas</span></cite>
-        </footer>
-      </blockquote>
-    </div><!--Fin de testimonial-->
-    <div class="testimonial">
-      <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia adipisci eius deleniti praesentium modi repudiandae, maxime fugit, voluptatibus minus aliquid ab itaque veniam odio? Dolorem obcaecati expedita odit voluptates itaque.</p>
-        <footer class="info-testimonial clearfix">
-          <img src="public/imgs/testimonial.jpg" alt="imagen testimonial" srcset="">
-          <cite>Rolando Zavala, el macizo <span>Ingeniero en sistemas</span></cite>
-        </footer>
-      </blockquote>
-    </div><!--Fin de testimonial-->
-  </div><!--Fin de TESTIMONIALES-->
-</section>
-
-<div class="newsletter parallax">
-  <div class="contenido contenedor">
-    <p>Registrate al Newsletter</p>
-    <h3>ETI-UPNFM</h3>
-    <a href="#" class="button transparente">registro</a>
-
-  </div><!--contenido contenedor-->
-</div><!--newsletter parallax-->
-
 <section class="seccion">
   <h2>Faltan</h2>
   <div class="cuenta-regresiva contenedor ">
     <ul class="clearfix">
-      <li><p class="numero">80</p>Dias</li>
-      <li><p class="numero">15</p>horas</li>
+      <li><p class="numero">2</p>Dias</li>
+      <li><p class="numero">18</p>horas</li>
       <li><p class="numero">40</p>minutos</li>
       <li><p class="numero">3</p>segundos</li>
     </ul>

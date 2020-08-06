@@ -44,7 +44,7 @@
 <div class="barra">
     <div class="contenedor clearfix">
       <div class="logo">
-        <img src="public/imgs/logo.svg" alt="Logo" srcset="">
+        <img src="public/imgs/letras_upnfm.png" alt="ETI-UPNFM" srcset="">
       </div>
   
       <div class="menu-movil">
