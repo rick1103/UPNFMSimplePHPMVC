@@ -54,9 +54,11 @@
       </div>
   
       <nav class="navegacion-principal clearfix">
+        <a href="index.php" class="">INICIO</a>
         <a href="index.php?page=eventos" class="">conferencia</a>
         <a href="index.php?page=calendario" class="">calendario</a>
         <a href="index.php?page=invitados" class="">invitados</a>
+        <a href="paypal/index.html" class="">Donaciones</a>
         <a href="index.php?page=registro">reservaciones</a>
       </nav>
     </div><!-- contenedor-->
