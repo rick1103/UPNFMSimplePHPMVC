@@ -14,7 +14,7 @@
  */
 $server = "127.0.0.1";
 $user = "root";
-$pswd = "root.1234";
+$pswd = "";
 $database = "eti_upnfm";
 $port = "3306";
 
